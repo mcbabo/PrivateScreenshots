@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+	<shortcut android:icon="res/mipmap-xxxhdpi-v4/ic_fast_screenshot.png" android:enabled="true">
+		<intent android:targetPackage="com.shamanland.privatescreenshots" android:action="d457d020" android:targetClass="com.shamanland.privatescreenshots.main.Launcher" />
+		<categories android:name="android.shortcut.conversation" />
+	</shortcut>
+</shortcuts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="-1" android:layout_height="-1">
+	<android.support.v4.view.ViewPagerEx android:id="false" android:background="resourceId:0x106000c" android:layout_width="-1" android:layout_height="-1" />
+	<android.support.v7.widget.Toolbar android:theme="resourceId:0x7f10018f" android:id="false" android:paddingTop="24dp" android:fitsSystemWindows="true" android:layout_width="-1" android:layout_height="80dp" app:popupTheme="resourceId:0x7f100192" />
+	<LinearLayout android:gravity="0x10" android:layout_gravity="0x50" android:orientation="0" android:id="false" android:layout_width="-1" android:layout_height="120dp">
+		<Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="{4:1065353216}" />
+		<FrameLayout android:id="false" android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp">
+			<ImageView android:layout_gravity="0x11" android:background="resourceId:0x0" android:layout_width="-1" android:layout_height="-1" android:src="resourceId:0x7f080086" />
+		</FrameLayout>
+		<Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="{4:1065353216}" />
+		<FrameLayout android:id="false" android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp">
+			<ImageView android:layout_gravity="0x11" android:background="resourceId:0x0" android:layout_width="-1" android:layout_height="-1" android:src="resourceId:0x7f080080" />
+		</FrameLayout>
+		<Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="{4:1065353216}" />
+	</LinearLayout>
+</FrameLayout>

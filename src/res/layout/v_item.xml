@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="false" android:layout_width="-1" android:layout_height="-2" android:layout_margin="4dp" android:elevation="4dp" app:cardBackgroundColor="res/color/item_background.xml">
+	<LinearLayout android:orientation="1" android:layout_width="-1" android:layout_height="-2">
+		<FrameLayout android:id="false" android:layout_width="-1" android:layout_height="120dp" />
+		<LinearLayout android:gravity="0x10" android:orientation="0" android:layout_width="-1" android:layout_height="-2">
+			<TextView android:textSize="12sp" android:ellipsize="3" android:id="false" android:layout_width="0dp" android:layout_height="-2" android:maxLines="2" android:layout_weight="{4:1065353216}" android:layout_marginStart="8dp" />
+			<Button android:textSize="18dp" android:textStyle="0x1" android:id="false" android:background="resourceId:0x0" android:layout_width="-2" android:layout_height="-2" android:minWidth="36dp" android:text="⋮" />
+		</LinearLayout>
+	</LinearLayout>
+</android.support.v7.widget.CardView>

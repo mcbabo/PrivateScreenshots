@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="false" android:layout_width="-1" android:layout_height="-1">
+	<android.support.v7.widget.RecyclerView android:id="false" android:layout_width="-1" android:layout_height="-1" />
+	<ViewStub android:id="false" android:visibility="2" android:layout="res/layout/v_tutorial.xml" android:layout_width="-1" android:layout_height="-1" />
+	<ViewStub android:id="false" android:visibility="2" android:layout="res/layout/v_confirm_credentials.xml" android:layout_width="-1" android:layout_height="-1" />
+</FrameLayout>

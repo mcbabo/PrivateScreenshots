@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1080" android:versionName="1.13.9" android:installLocation="internalOnly" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.shamanland.privatescreenshots" platformBuildVersionCode="28" platformBuildVersionName="9">
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+	<uses-permission android:name="android.permission.USE_FINGERPRINT" />
+	<uses-permission android:name="android.permission.USE_BIOMETRIC" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+	<uses-permission android:name="com.android.vending.BILLING" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.front" android:required="false" />
+	<uses-feature android:name="android.hardware.telephony" android:required="false" />
+	<supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+	<uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+	<application android:theme="resourceId:0x7f100006" android:label="Private Screenshots" android:icon="res/mipmap-xxxhdpi-v4/ic_launcher.png" android:name="com.shamanland.privatescreenshots.PsApp" android:allowBackup="false" android:supportsRtl="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory">
+		<uses-library android:name="org.apache.http.legacy" android:required="false" />
+		<meta-data android:name="com.shamanland.metadata.rc.prefix" android:value="ps_" />
+		<meta-data android:name="com.google.android.gms.ads.APPLICATION_ID" android:value="ca-app-pub-7068599842540707~1895207624" />
+		<meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
+		<activity android:name="com.shamanland.privatescreenshots.main.Launcher" android:launchMode="singleTask">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<meta-data android:name="android.app.shortcuts" android:resource="res/xml/shortcuts.xml" />
+		</activity>
+		<activity android:theme="resourceId:0x7f100007" android:name="com.shamanland.privatescreenshots.viewer.Viewer" />
+		<activity android:theme="resourceId:0x7f100006" android:name="com.shamanland.privatescreenshots.settings.SettingsActivity" />
+		<activity android:name="com.shamanland.privatescreenshots.storage.ConfirmCredentialsActivity" android:taskAffinity=":provider" android:excludeFromRecents="true" android:launchMode="singleTask" android:allowTaskReparenting="false" />
+		<activity android:name="com.shamanland.privatescreenshots.backup.BackupActivity" />
+		<activity android:theme="resourceId:0x7f100009" android:name="com.shamanland.privatescreenshots.utils.ProxyActivity" />
+		<activity android:theme="@android:style/Theme.Material" android:name="com.shamanland.privatescreenshots.utils.DrawablesValidator" />
+		<service android:name="com.shamanland.privatescreenshots.overlay.OverlayService" android:exported="false" />
+		<service android:label="Screen capture" android:icon="res/drawable/ic_diaphragm.xml" android:name="com.shamanland.privatescreenshots.main.QuickSettingsService" android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+			<intent-filter>
+				<action android:name="android.service.quicksettings.action.QS_TILE" />
+			</intent-filter>
+		</service>
+		<meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="resourceId:0x7f080084" />
+		<meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="2196f3" />
+		<provider android:name="com.shamanland.privatescreenshots.storage.Provider" android:permission="android.permission.MANAGE_DOCUMENTS" android:enabled="true" android:exported="true" android:authorities="com.shamanland.privatescreenshots" android:grantUriPermissions="true">
+			<intent-filter>
+				<action android:name="android.content.action.DOCUMENTS_PROVIDER" />
+			</intent-filter>
+		</provider>
+		<provider android:name="android.support.v4.content.FileProvider" android:exported="false" android:authorities="com.shamanland.privatescreenshots.files" android:grantUriPermissions="true">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="res/xml/provider_paths.xml" />
+		</provider>
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="0xfb0" />
+		<provider android:name="com.google.android.gms.ads.MobileAdsInitProvider" android:exported="false" android:authorities="com.shamanland.privatescreenshots.mobileadsinitprovider" android:initOrder="100" />
+		<service android:name="com.shamanland.copier.Copier" android:exported="false" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true" />
+		<service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" />
+		<service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false">
+			<intent-filter android:priority="-500">
+				<action android:name="com.google.firebase.MESSAGING_EVENT" />
+			</intent-filter>
+		</service>
+		<provider android:name="com.google.firebase.perf.provider.FirebasePerfProvider" android:exported="false" android:authorities="com.shamanland.privatescreenshots.firebaseperfprovider" android:initOrder="101" />
+		<service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false">
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.perf.FirebasePerfRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+			<meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar" />
+		</service>
+		<receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.firebase.iid.FirebaseInstanceIdService" android:exported="true">
+			<intent-filter android:priority="-500">
+				<action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+			</intent-filter>
+		</service>
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false" />
+		<provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="com.shamanland.privatescreenshots.firebaseinitprovider" android:initOrder="100" />
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false" />
+		<receiver android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:enabled="true" android:exported="true">
+			<intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+		</receiver>
+		<service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false" />
+		<service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" />
+		<meta-data android:name="com.google.android.gms.version" android:value="12451000" />
+		<activity android:theme="@android:style/Theme.Translucent.NoTitleBar" android:name="com.android.billingclient.api.ProxyBillingActivity" android:configChanges="0x5b0" />
+		<provider android:name="com.crashlytics.android.CrashlyticsInitProvider" android:exported="false" android:authorities="com.shamanland.privatescreenshots.crashlyticsinitprovider" android:initOrder="90" />
+		<meta-data android:name="com.android.vending.splits.required" android:value="true" />
+		<meta-data android:name="com.android.vending.splits" android:value="res/xml/splits0.xml" />
+		<meta-data android:name="com.android.vending.derived.apk.id" android:value="1" />
+	</application>
+</manifest>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="false" android:title="Details" />
+	<item android:id="false" android:title="Share" />
+	<item android:id="false" android:title="Move to gallery" />
+	<item android:id="false" android:title="Delete" />
+</menu>

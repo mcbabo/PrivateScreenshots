@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="-1" android:layout_height="-1">
+	<LinearLayout android:gravity="0x11" android:layout_gravity="0x1" android:orientation="1" android:layout_width="-1" android:layout_height="-2" android:animateLayoutChanges="true" android:paddingStart="32dp" android:paddingEnd="32dp">
+		<TextView android:textSize="16sp" android:textStyle="0x1" android:layout_width="-2" android:layout_height="-2" android:layout_marginTop="24dp" android:layout_marginBottom="8dp" android:text="FAQ" />
+		<TextView android:textSize="16sp" android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:text="How to use?" android:textAlignment="1" />
+		<com.shamanland.privatescreenshots.main.Tutorial android:orientation="1" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:layout_marginBottom="8dp" />
+		<TextView android:textSize="16sp" android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:text="How it works?" android:textAlignment="1" />
+		<TextView android:textSize="12sp" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:text="App launches &apos;presentation&apos; mode on your device and captures whole screen&apos;s content. It displays screenshot button, so just press it and app will save current display&apos;s frame as screenshot." />
+		<TextView android:textSize="16sp" android:gravity="0x11" android:id="false" android:layout_width="-1" android:layout_height="-2" android:minHeight="48dp" android:text="How it ensures privacy?" android:textAlignment="1" />
+		<TextView android:textSize="12sp" android:id="false" android:visibility="2" android:layout_width="-1" android:layout_height="-2" android:text="All files saved into private app&apos;s directory. App doesn&apos;t broadcast any message about new screenshot. Any other app can&apos;t access screenshots directly. Only you can browse them, share or delete." />
+	</LinearLayout>
+</ScrollView>

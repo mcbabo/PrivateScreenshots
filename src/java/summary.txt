@@ -1,0 +1,82 @@
+Summary for /storage/emulated/0/show-java/sources/com.shamanland.privatescreenshots/jar-files/0.jar
+Decompiled with CFR 0.0
+
+
+com.github.chrisbanes.photoview.PhotoViewAttacher
+----------------------------
+
+onTouch(android.view.View android.view.MotionEvent )
+  Unable to fully structure code
+
+
+com.shamanland.analytics.Analytics
+----------------------------
+
+<init>(com.google.firebase.analytics.FirebaseAnalytics android.content.Context )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl209 : RETURN : trying to set 1 previously set to 0
+
+
+com.shamanland.common.utils.Utils
+----------------------------
+
+getManifestMetadata(android.content.Context java.lang.String java.lang.String )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl21.1 : ALOAD_2 : trying to set 1 previously set to 0
+
+
+com.shamanland.privatescreenshots.mover.Mover
+----------------------------
+
+close(java.io.Closeable )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Underrun type stack
+copyFile(java.io.File java.io.File byte[] boolean[] )
+  Loose catch block
+
+
+com.shamanland.privatescreenshots.overlay.OverlayService
+----------------------------
+
+destroyScreenStateReceiver()
+  Unable to fully structure code
+onTouch(android.view.View android.view.MotionEvent )
+  Unable to fully structure code
+onNewStatus(com.shamanland.privatescreenshots.saver.Saver$Status )
+  Unable to fully structure code
+
+
+com.shamanland.privatescreenshots.security.Protector
+----------------------------
+
+encryptImpl(byte[] )
+  Loose catch block
+
+
+com.shamanland.privatescreenshots.settings.SettingsFragment
+----------------------------
+
+onPreferenceChange(android.support.v7.preference.Preference java.lang.Object )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl11 : ALOAD_0 : trying to set 1 previously set to 0
+onPreferenceChange(android.support.v7.preference.Preference java.lang.Object )
+  Unable to fully structure code
+setProtectorEnabled(boolean boolean )
+  Unable to fully structure code
+
+
+com.shamanland.privatescreenshots.shooter.Shooter
+----------------------------
+
+take()
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl118 : ALOAD_0 : trying to set 1 previously set to 0
+
+
+com.shamanland.privatescreenshots.utils.AppHelper
+----------------------------
+
+onPositive(java.lang.String android.os.Bundle )
+  Unable to fully structure code
+
+
+com.shamanland.privatescreenshots.utils.ErrorParser
+----------------------------
+
+findProducerFormat(java.lang.String int[] )
+  Exception : org.benf.cfr.reader.util.ConfusedCFRException: Invalid stack depths @ lbl22.1 : ICONST_0 : trying to set 0 previously set to 1

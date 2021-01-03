@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Payments" android:key="88c14103">
+		<SwitchPreference android:title="Hide any advertisement permanently" android:key="3e546eb0" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="UI options">
+		<android.support.v7.preference.SeekBarPreference android:title="Button visibility" android:key="96b9bb9b" android:summary="100% means that button is fully visible" />
+		<ListPreference android:entries="resourceId:0x7f030000" android:title="Shake to shot" android:key="5929050c" android:summary="This feature may be useful for apps like Instagram, when you need to hold finger to pause video story" android:entryValues="resourceId:0x7f030001" />
+		<CheckBoxPreference android:title="Use external app for viewing files" android:key="3e55edda" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Never show again">
+		<CheckBoxPreference android:title="Delete single file from list" android:key="8ea55f32" />
+		<CheckBoxPreference android:title="Delete single file from viewer" android:key="c4581dd6" />
+		<CheckBoxPreference android:title="Delete selected files" android:key="d658a486" />
+		<CheckBoxPreference android:title="Move to gallery" android:key="4c3d2c4c" />
+		<CheckBoxPreference android:title="Results of moving" android:key="b261c976" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Security" android:key="e7e3d101">
+		<CheckBoxPreference android:title="Authentication required" android:key="4dbd1ea6" android:summary="Require authentication to access screenshots" />
+		<com.shamanland.privatescreenshots.utils.EditTextPreference android:hint="3..300" android:title="Authentication validity duration" android:key="bdd17910" android:defaultValue="30" android:dialogMessage="Enter duration of time in seconds for which files will be available after the user is successfully authenticated." android:inputType="0x2" />
+	</PreferenceCategory>
+</PreferenceScreen>

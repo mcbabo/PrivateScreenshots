@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:theme="resourceId:0x7f100006" android:orientation="1" android:layout_width="-2" android:layout_height="-2">
+	<FrameLayout android:layout_gravity="0x1" android:id="false" android:layout_width="48dp" android:layout_height="48dp">
+		<ImageView android:layout_gravity="0x11" android:background="res/drawable/oval_white.xml" android:layout_width="40dp" android:layout_height="40dp" android:src="res/drawable/ic_diaphragm_fab.xml" android:scaleType="5" android:backgroundTint="ff520" />
+	</FrameLayout>
+	<ImageView android:layout_gravity="0x1" android:id="false" android:layout_width="48dp" android:layout_height="48dp" android:src="resourceId:0x7f08007e" android:scaleType="5" android:tint="ff520" />
+</LinearLayout>
